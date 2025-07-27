@@ -14,7 +14,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="H200" datetime="" altitude="95.00" longitude="127.097930" description="" author="" latitude="37.377082" source="" copyright="" nodeid="node1" info="" heading="0" tags="DesignSuite" title="" comment=""/>
+    <userdata customnodeid="Design_Suite" datetime="" altitude="95.00" longitude="127.097930" description="" author="" latitude="37.377082" source="" copyright="" nodeid="node1" info="" heading="0" tags="DesignSuite" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -46,7 +46,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="H200" datetime="" altitude="95.00" longitude="127.097930" description="" author="" latitude="37.377082" source="" copyright="" nodeid="node3" info="" heading="0" tags="DesignSuite" title="" comment=""/>
+    <userdata customnodeid="Design_Suite" datetime="" altitude="95.00" longitude="127.097930" description="" author="" latitude="37.377082" source="" copyright="" nodeid="node3" info="" heading="0" tags="DesignSuite" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -78,7 +78,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="H200" datetime="" altitude="95.00" longitude="127.097930" description="" author="" latitude="37.377082" source="" copyright="" nodeid="node4" info="" heading="0" tags="DesignSuite" title="" comment=""/>
+    <userdata customnodeid="Design_Suite" datetime="" altitude="95.00" longitude="127.097930" description="" author="" latitude="37.377082" source="" copyright="" nodeid="node4" info="" heading="0" tags="DesignSuite" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -105,7 +105,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="H200" datetime="" altitude="95.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node5" info="" heading="0" tags="DesignSuite" title="" comment=""/>
+    <userdata customnodeid="Design_Suite" datetime="" altitude="95.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node5" info="" heading="0" tags="DesignSuite" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -134,7 +134,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="H200" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node6" info="" heading="0" tags="DesignSuite" title="" comment=""/>
+    <userdata customnodeid="Fabrication_Room" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node6" info="" heading="0" tags="DesignSuite" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -160,7 +160,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="H200" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node7" info="" heading="0" tags="DesignSuite" title="" comment=""/>
+    <userdata customnodeid="Media_Production" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node7" info="" heading="0" tags="DesignSuite" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -186,11 +186,11 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="H200" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node10" info="" heading="0" tags="DesignSuite" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node10" info="" heading="0" tags="DesignSuite" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node" target="172.7/-4.4/100.0" url="{node9}" description="" id="Point01" distance="0.0001" tilt="-7.6" pan="-171.37" title=""/>
+      <hotspot skinid="ht_node" target="172.7/-4.4/100.0" url="{node9}" tilt="-7.6" pan="-171.37" title="" description="" id="Point01"/>
       <hotspot skinid="ht_node_1" target="-179.5/-1.5/100.0" url="{node3}" description="" id="Point02" distance="13.8559" tilt="-8.73" pan="-356.37" title=""/>
     </hotspots>
     <media/>
@@ -213,12 +213,12 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node9" info="" heading="0" tags="DesignSuite" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node9" info="" heading="0" tags="DesignSuite" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node_1" target="-177.3/-9.5/100.0" url="{node8}" description="" id="Point01" distance="0.0001" tilt="-3.86" pan="-242.23" title=""/>
-      <hotspot skinid="ht_node" target="" url="{node10}" description="" id="Point02" distance="0.0001" tilt="-2.86" pan="-6.51" title=""/>
+      <hotspot skinid="ht_node_1" target="-177.3/-9.5/100.0" url="{node8}" tilt="-3.86" pan="-242.23" title="" description="" id="Point01"/>
+      <hotspot skinid="ht_node" target="" url="{node10}" tilt="-2.86" pan="-6.51" title="" description="" id="Point02"/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -240,11 +240,11 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="GreenHouse" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node8" info="" heading="0" tags="DesignSuite" title="" comment=""/>
+    <userdata customnodeid="Green_House" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node8" info="" heading="0" tags="DesignSuite" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node_1" target="-101.7/-3.1/100.0" url="{node9}" description="" id="Point01" distance="0.0001" tilt="-3.83" pan="-111.46" title=""/>
+      <hotspot skinid="ht_node_1" target="-101.7/-3.1/100.0" url="{node9}" tilt="-3.83" pan="-111.46" title="" description="" id="Point01"/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -266,7 +266,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node11" info="" heading="0" tags="1F" title="" comment=""/>
+    <userdata customnodeid="Outdoor" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node11" info="" heading="0" tags="1F" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -292,7 +292,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node12" info="" heading="0" tags="1F" title="" comment=""/>
+    <userdata customnodeid="HS_Entrance" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node12" info="" heading="0" tags="1F" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -319,7 +319,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node13" info="" heading="0" tags="1F" title="" comment=""/>
+    <userdata customnodeid="HS_Lobby" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node13" info="" heading="0" tags="1F" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -347,7 +347,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node14" info="" heading="0" tags="Music" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node14" info="" heading="0" tags="Music" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -374,7 +374,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node15" info="" heading="0" tags="Music" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node15" info="" heading="0" tags="Music" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -403,7 +403,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node16" info="" heading="0" tags="Music" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node16" info="" heading="0" tags="Music" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -430,7 +430,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node18" info="" heading="0" tags="Music" title="" comment=""/>
+    <userdata customnodeid="Music_Hallway" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node18" info="" heading="0" tags="Music" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -457,7 +457,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node19" info="" heading="0" tags="Music" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node19" info="" heading="0" tags="Music" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -484,12 +484,12 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node21" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="Music_Entrances" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node21" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node_1" target="-129.4/-3.9/100.0" url="{node32}" description="" id="Point01" distance="30.0036" tilt="-5.17" pan="-209.91" title=""/>
-      <hotspot skinid="ht_node_1" target="64.0/-2.6/100.0" url="{node33}" description="" id="Point02" distance="31.4167" tilt="-9.51" pan="-161.58" title=""/>
+      <hotspot skinid="ht_node_1" target="-129.4/-3.9/100.0" url="{node32}" description="" id="Point01" distance="30.0037" tilt="-5.17" pan="-209.91" title=""/>
+      <hotspot skinid="ht_node_1" target="64.0/-2.6/100.0" url="{node33}" description="" id="Point02" distance="31.4168" tilt="-9.51" pan="-161.58" title=""/>
       <hotspot skinid="ht_node" target="-70.5/-1.9/100.0" url="{node18}" tilt="-9.05" pan="-94.89" title="" description="" id="Point03"/>
     </hotspots>
     <media/>
@@ -512,7 +512,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node22" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="PAC_Entrance" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node22" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -540,7 +540,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node23" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="PAC" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node23" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -567,7 +567,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node24" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="PAC" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node24" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -595,7 +595,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node25" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="PAC" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node25" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -622,7 +622,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node26" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="Stage" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node26" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -649,7 +649,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node27" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="PAC" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node27" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -676,7 +676,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node28" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="PAC" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node28" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -703,7 +703,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node29" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="PAC" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node29" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -730,7 +730,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node30" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="PAC" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node30" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -757,7 +757,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node31" info="" heading="0" tags="PAC" title="" comment=""/>
+    <userdata customnodeid="PAC_Entrance" datetime="" altitude="83.00" longitude="127.097862" description="" author="" latitude="37.377113" source="" copyright="" nodeid="node31" info="" heading="0" tags="PAC" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -785,11 +785,11 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="94.00" longitude="127.098175" description="" author="" latitude="37.377147" source="" copyright="" nodeid="node32" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Percussion_Studio" datetime="" altitude="94.00" longitude="127.098175" description="" author="" latitude="37.377147" source="" copyright="" nodeid="node32" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node_1" target="-125.2/-0.6/100.0" url="{node21}" description="" id="Point01" distance="30.0036" tilt="-2.97" pan="-301.99" title=""/>
+      <hotspot skinid="ht_node_1" target="-125.2/-0.6/100.0" url="{node21}" description="" id="Point01" distance="30.0037" tilt="-2.97" pan="-301.99" title=""/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -811,11 +811,11 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="93.00" longitude="127.098167" description="" author="" latitude="37.377227" source="" copyright="" nodeid="node33" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Band_Room" datetime="" altitude="93.00" longitude="127.098167" description="" author="" latitude="37.377227" source="" copyright="" nodeid="node33" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node_1" target="119.3/-2.8/100.0" url="{node21}" description="" id="Point01" distance="31.4167" tilt="-0.83" pan="-169.7" title=""/>
+      <hotspot skinid="ht_node_1" target="119.3/-2.8/100.0" url="{node21}" description="" id="Point01" distance="31.4168" tilt="-0.83" pan="-169.7" title=""/>
       <hotspot skinid="ht_node_1" target="" url="" tilt="-2.3" pan="-295.36" title="" description="" id="Point02"/>
     </hotspots>
     <media/>
@@ -864,7 +864,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node35" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Choir_Entrance" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node35" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -891,7 +891,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node36" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Cafeteria" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node36" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -919,7 +919,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node37" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Cafeteria" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node37" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -945,7 +945,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node38" info="" heading="0" tags="B1" title="" comment=""/>
+    <userdata customnodeid="Art_Gallery" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node38" info="" heading="0" tags="B1" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -971,7 +971,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node39" info="" heading="0" tags="B1" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="8.00" longitude="126.200416" description="" author="" latitude="36.889163" source="" copyright="" nodeid="node39" info="" heading="0" tags="B1" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -999,7 +999,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="77.00" longitude="127.098175" description="" author="" latitude="37.378025" source="" copyright="" nodeid="node40" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Field" datetime="" altitude="77.00" longitude="127.098175" description="" author="" latitude="37.378025" source="" copyright="" nodeid="node40" info="" heading="0" tags="" title="" comment="Field"/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1028,11 +1028,11 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="107.00" longitude="127.098289" description="" author="" latitude="37.378154" source="" copyright="" nodeid="node41" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="MPR" datetime="" altitude="107.00" longitude="127.098289" description="" author="" latitude="37.378154" source="" copyright="" nodeid="node41" info="" heading="0" tags="" title="" comment="MPR"/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node_1" target="-7.0/-0.8/100.0" url="{node42}" description="" id="Point01" distance="31.7371" tilt="2.56" pan="-196.18" title=""/>
+      <hotspot skinid="ht_node_1" target="-7.0/-0.8/100.0" url="{node42}" description="" id="Point01" distance="31.7384" tilt="2.56" pan="-196.18" title=""/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -1054,13 +1054,13 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="77.00" longitude="127.098182" description="" author="" latitude="37.378192" source="" copyright="" nodeid="node42" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Field" datetime="" altitude="77.00" longitude="127.098182" description="" author="" latitude="37.378192" source="" copyright="" nodeid="node42" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
       <hotspot skinid="ht_node" target="" url="{node40}" description="" id="Point01" distance="18.5799" tilt="-14.92" pan="-38.54" title=""/>
-      <hotspot skinid="ht_node_1" target="0.0/-3.6/100.0" url="{node41}" description="" id="Point02" distance="31.7371" tilt="-2.98" pan="-202.01" title=""/>
-      <hotspot skinid="ht_node_1" target="32.5/-0.9/100.0" url="{node43}" description="" id="Point03" distance="23.8582" tilt="-2.42" pan="-325.06" title=""/>
+      <hotspot skinid="ht_node_1" target="0.0/-3.6/100.0" url="{node41}" description="" id="Point02" distance="31.7384" tilt="-2.98" pan="-202.01" title=""/>
+      <hotspot skinid="ht_node_1" target="32.5/-0.9/100.0" url="{node43}" description="" id="Point03" distance="23.8586" tilt="-2.42" pan="-325.06" title=""/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -1082,12 +1082,12 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="82.00" longitude="127.098205" description="" author="" latitude="37.377983" source="" copyright="" nodeid="node43" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Field" datetime="" altitude="82.00" longitude="127.098205" description="" author="" latitude="37.377983" source="" copyright="" nodeid="node43" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node_1" target="2.5/-0.4/100.0" url="{node40}" description="" id="Point01" distance="7.33741" tilt="-3.95" pan="-113.03" title=""/>
-      <hotspot skinid="ht_node_1" target="-164.4/-0.7/100.0" url="{node42}" description="" id="Point02" distance="23.8582" tilt="-5.02" pan="-185.91" title=""/>
+      <hotspot skinid="ht_node_1" target="2.5/-0.4/100.0" url="{node40}" description="" id="Point01" distance="7.33856" tilt="-3.95" pan="-113.03" title=""/>
+      <hotspot skinid="ht_node_1" target="-164.4/-0.7/100.0" url="{node42}" description="" id="Point02" distance="23.8586" tilt="-5.02" pan="-185.91" title=""/>
       <hotspot skinid="ht_node" target="-125.9/0.6/100.0" url="{node45}" description="" id="Point03" distance="21.7176" tilt="-2.27" pan="-329.09" title=""/>
     </hotspots>
     <media/>
@@ -1110,12 +1110,12 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="80.00" longitude="127.097801" description="" author="" latitude="37.378063" source="" copyright="" nodeid="node44" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Field" datetime="" altitude="80.00" longitude="127.097801" description="" author="" latitude="37.378063" source="" copyright="" nodeid="node44" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
       <hotspot skinid="ht_node" target="144.5/-1.3/100.0" url="{node45}" description="" id="Point01" distance="47.5537" tilt="-3.2" pan="-180.51" title=""/>
-      <hotspot skinid="ht_node" target="-93.8/-0.7/100.0" url="{node49}" description="" id="Point02" distance="15.8796" tilt="5.58" pan="-277.77" title=""/>
+      <hotspot skinid="ht_node" target="-93.8/-0.7/100.0" url="{node49}" description="" id="Point02" distance="15.8785" tilt="5.58" pan="-277.77" title=""/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -1137,7 +1137,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="81.00" longitude="127.098213" description="" author="" latitude="37.377788" source="" copyright="" nodeid="node45" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Field" datetime="" altitude="81.00" longitude="127.098213" description="" author="" latitude="37.377788" source="" copyright="" nodeid="node45" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1164,11 +1164,11 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="79.00" longitude="127.098632" description="" author="" latitude="37.377834" source="" copyright="" nodeid="node46" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Field" datetime="" altitude="79.00" longitude="127.098632" description="" author="" latitude="37.377834" source="" copyright="" nodeid="node46" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node" target="-135.2/0.4/100.0" url="{node47}" description="" id="Point01" distance="19.85" tilt="4.69" pan="-252.98" title=""/>
+      <hotspot skinid="ht_node" target="-135.2/0.4/100.0" url="{node47}" description="" id="Point01" distance="19.8498" tilt="4.69" pan="-252.98" title=""/>
       <hotspot skinid="ht_node" target="-34.5/-0.8/100.0" url="{node45}" description="" id="Point02" distance="37.4284" tilt="-2.15" pan="-349.75" title=""/>
     </hotspots>
     <media/>
@@ -1191,13 +1191,13 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="83.00" longitude="127.098571" description="" author="" latitude="37.377666" source="" copyright="" nodeid="node47" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Field" datetime="" altitude="83.00" longitude="127.098571" description="" author="" latitude="37.377666" source="" copyright="" nodeid="node47" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node" target="90.1/-0.4/100.0" url="{node48}" description="" id="Point01" distance="49.4913" tilt="-1.29" pan="-219.35" title=""/>
-      <hotspot skinid="ht_node" target="-68.6/2.6/100.0" url="{node46}" description="" id="Point02" distance="19.85" tilt="-9.17" pan="-307.76" title=""/>
-      <hotspot skinid="ht_node" target="-76.7/0.0/100.0" url="{node45}" description="" id="Point03" distance="34.4775" tilt="-4.99" pan="-254.96" title=""/>
+      <hotspot skinid="ht_node" target="90.1/-0.4/100.0" url="{node48}" description="" id="Point01" distance="49.4912" tilt="-1.29" pan="-219.35" title=""/>
+      <hotspot skinid="ht_node" target="-68.6/2.6/100.0" url="{node46}" description="" id="Point02" distance="19.8498" tilt="-9.17" pan="-307.76" title=""/>
+      <hotspot skinid="ht_node" target="-76.7/0.0/100.0" url="{node45}" description="" id="Point03" distance="34.4774" tilt="-4.99" pan="-254.96" title=""/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -1219,15 +1219,15 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="79.00" longitude="127.098129" description="" author="" latitude="37.377937" source="" copyright="" nodeid="node48" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Field" datetime="" altitude="79.00" longitude="127.098129" description="" author="" latitude="37.377937" source="" copyright="" nodeid="node48" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node" target="-125.4/-0.6/100.0" url="{node45}" description="" id="Point01" distance="18.2645" tilt="-11.11" pan="-340.13" title=""/>
+      <hotspot skinid="ht_node" target="-125.4/-0.6/100.0" url="{node45}" description="" id="Point01" distance="18.2644" tilt="-11.11" pan="-340.13" title=""/>
       <hotspot skinid="ht_node" target="-49.7/0.2/100.0" url="{node44}" description="" id="Point02" distance="32.2067" tilt="-5.55" pan="-281.49" title=""/>
       <hotspot skinid="ht_node" target="-122.6/1.2/100.0" url="{node46}" description="" id="Point03" distance="45.8975" tilt="-6.31" pan="-35.98" title=""/>
-      <hotspot skinid="ht_node" target="-39.2/1.1/100.0" url="{node47}" description="" id="Point04" distance="49.4913" tilt="-1.85" pan="-73.27" title=""/>
-      <hotspot skinid="ht_node" target="-165.9/0.3/100.0" url="{node49}" description="" id="Point05" distance="28.4166" tilt="-1.53" pan="-242.85" title=""/>
+      <hotspot skinid="ht_node" target="-39.2/1.1/100.0" url="{node47}" description="" id="Point04" distance="49.4912" tilt="-1.85" pan="-73.27" title=""/>
+      <hotspot skinid="ht_node" target="-165.9/0.3/100.0" url="{node49}" description="" id="Point05" distance="28.4159" tilt="-1.53" pan="-242.85" title=""/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -1249,13 +1249,13 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" altitude="88.00" longitude="127.097824" description="" author="" latitude="37.377941" source="" copyright="" nodeid="node49" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Field" datetime="" altitude="88.00" longitude="127.097824" description="" author="" latitude="37.377941" source="" copyright="" nodeid="node49" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_node" target="-93.3/-0.3/100.0" url="{node44}" description="" id="Point01" distance="15.8796" tilt="-7.99" pan="-269" title=""/>
-      <hotspot skinid="ht_node" target="-176.3/-1.3/100.0" url="{node45}" description="" id="Point02" distance="38.9859" tilt="-5" pan="-323.48" title=""/>
-      <hotspot skinid="ht_node" target="-66.2/1.0/100.0" url="{node48}" description="" id="Point03" distance="28.4166" tilt="-1.45" pan="-1.72" title=""/>
+      <hotspot skinid="ht_node" target="-93.3/-0.3/100.0" url="{node44}" description="" id="Point01" distance="15.8785" tilt="-7.99" pan="-269" title=""/>
+      <hotspot skinid="ht_node" target="-176.3/-1.3/100.0" url="{node45}" description="" id="Point02" distance="38.9856" tilt="-5" pan="-323.48" title=""/>
+      <hotspot skinid="ht_node" target="-66.2/1.0/100.0" url="{node48}" description="" id="Point03" distance="28.4159" tilt="-1.45" pan="-1.72" title=""/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -1277,7 +1277,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node50" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="PE_Area" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node50" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1303,7 +1303,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node51" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node51" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1330,7 +1330,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node53" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node53" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1356,7 +1356,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node54" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node54" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1383,7 +1383,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node55" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Fitness_Center" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node55" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1409,7 +1409,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node56" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Fitness_Center" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node56" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1436,7 +1436,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node57" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Fitness_Center" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node57" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1463,7 +1463,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node58" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node58" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1491,7 +1491,7 @@
       <min tilt="-90" pan="0" fovpixel="2"/>
       <max fovstereographic="330" scaletofit="1" tilt="90" pan="360" fovfisheye="360" fov="140"/>
     </view>
-    <userdata customnodeid="" datetime="" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node59" info="" heading="0" tags="" title="" comment=""/>
+    <userdata customnodeid="Hallway" datetime="" altitude="-3048.00" longitude="" description="" author="" latitude="" source="" copyright="" nodeid="node59" info="" heading="0" tags="" title="" comment=""/>
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
@@ -1510,5 +1510,5 @@
       <sequence title="Animation01"/>
     </animationsequences>
   </masternode>
-  <map type="web" index="0" id="Map01" mapprovider="googlemap" googlecustomstylecode="" title="" mapurltemplate="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" mapstyle="roadmap" mapmaxzoom="18"/>
+  <map type="file" index="0" id="FloorPlan01" height="341" tileformat="jpg" crispedges="0" width="512" zoomlevels="1" transparent="0" title="" floorplannorth="0" bgcolor="rgba(255, 255, 255, 1)"/>
 </tour>

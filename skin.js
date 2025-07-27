@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.10/21009
 // Filename: netov3.ggsk
-// Generated 2025-07-27T21:56:38
+// Generated 2025-07-27T22:13:40
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -2817,7 +2817,7 @@ function pano2vrSkin(player,base) {
 		el.ggFilteredIds = [];
 		el.ggMapLayers = [];
 		el.ggMapNotLoaded = true;
-		el.ggMapId = 'Map01';
+		el.ggMapId = '_none';
 		el.ggId="map";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=false;
@@ -2915,7 +2915,7 @@ function pano2vrSkin(player,base) {
 		el.ggFilteredIds = [];
 		el.ggMapLayers = [];
 		el.ggMapNotLoaded = true;
-		el.ggMapId = '_none';
+		el.ggMapId = 'FloorPlan01';
 		el.ggId="floorplan";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=false;
@@ -3005,7 +3005,19 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me._floorplan.logicBlock_visible();
+		me._floorplan.ggCurrentLogicStateSize = -1;
+		me._floorplan.ggCurrentLogicStateVisible = -1;
+		me._floorplan.ggUpdateConditionResize=function () {
+			var mapDetails = player.getMapDetails(me._floorplan.ggMapId);
+			if (mapDetails.hasOwnProperty('title')) {
+				me._floorplan.ggCalculateFloorplanSize(mapDetails);
+				me._floorplan.ggShowSimpleFloorplan(mapDetails);
+				me._floorplan.ggPlaceMarkersOnSimpleFloorplan();
+			}
+			if (me._floorplan.ggRadar) me._floorplan.ggRadar.update();
+		}
 		me._floorplan.ggUpdatePosition=function (useTransition) {
+			me._floorplan.ggUpdateConditionResize();
 		}
 		me._content_left.appendChild(me._floorplan);
 		el=me._thumbnail_menu=document.createElement('div');
@@ -9636,11 +9648,11 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='height : 54px;';
-		hs+='left : 739px;';
+		hs+='left : 608px;';
 		hs+='position : absolute;';
-		hs+='top : 21px;';
+		hs+='top : 19px;';
 		hs+='visibility : inherit;';
-		hs+='width : 162px;';
+		hs+='width : 434px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -9717,575 +9729,207 @@ function pano2vrSkin(player,base) {
 		me._info.logicBlock_visible();
 		me._map_bg.logicBlock_size();
 		me._map_bg.logicBlock_visible();
-		me._map.ggMarkerInstances=[];
-		me._map.ggLastNodeId=null;
-		me._map.ggMarkerArray=[];
-		me._map.ggGoogleMarkerArray=[];
-		me._map.ggLastZoom = -1;
-		me._map.ggLastLat = 0.0;
-		me._map.ggLastLng = 0.0;
-		me._map.ggRadar={ lastFov : -1, lastPan : -1, lastZoom : -1,activeNodeLatLng : null, poly : null }
-		me._map.ggRadar.update=function() {
-			if ((typeof google !== 'object') || (typeof google.maps !== 'object')) return;
-			var radar=me._map.ggRadar;
-			var map=me._map.ggMap;
-			if (!map) return;
+		me._map.ggInitMap=function() {};
+		me._map.ggInitMapMarkers=function() {};
+		me._map.ggClearMap=function() {};
+		me._map.logicBlock_size();
+		me._map.logicBlock_visible();
+		me._floorplan.ggMarkerInstances=[];
+		me._floorplan.ggLastNodeId=null;
+		me._floorplan.ggSimpleFloorplanMarkerArray=[];
+		me._floorplan.ggFloorplanWidth=0;
+		me._floorplan.ggFloorplanHeight=0;
+		me._floorplan__mapdiv=document.createElement('div');
+		me._floorplan__mapdiv.className='ggskin ggskin_map';
+		me._floorplan.appendChild(me._floorplan__mapdiv);
+		me._floorplan__img=document.createElement('img');
+		me._floorplan__img.className='ggskin ggskin_map';
+		me._floorplan__mapdiv.appendChild(me._floorplan__img);
+		me._floorplan.ggRadar={ lastFov : -1, lastPan : -1, xPos : -1, yPos : -1, radarElement : null }
+		me._floorplan.ggRadar.update=function() {
+			var radar=me._floorplan.ggRadar;
 			var d2r = Math.PI/180 ;
-			var r2d = 180/Math.PI ;
 			var fov = player.getFov();
 			var pan = player.getPanNorth();
-			var zoom = map.getZoom();
-			var gps;
-			if (player.getMapType(me._map.ggMapId) == 'web') {
-				gps=player.getNodeLatLng();
-			} else {
-				gps=player.getNodeMapCoords(null, me._map.ggMapId);
-				pan -= me._map.ggFloorplanNorth;
-			}
+			pan -= me._floorplan.ggFloorplanNorth;
 			var filterpassed = true;
 			var currentId = player.getCurrentNode();
-			if (me._map.ggFilteredIds.length > 0 && me._map.ggFilteredIds.indexOf(currentId) == -1) filterpassed = false;
-			if ((gps.length>=2) && ((gps[0]!=0) || (gps[1]!=0)) && filterpassed) {
-				if (zoom<6) zoom = 6; // avoid large radar beams on world map
-				if ((radar.poly) && (fov==radar.lastFov) && (pan==radar.lastPan) && (zoom==radar.lastZoom) && (gps[0]==radar.activeNodeLatLng.lat()) && (gps[1]==radar.activeNodeLatLng.lng())) return; 
-				radar.lastPan=pan;radar.lastFov=fov;radar.lastZoom=zoom;
-				radar.activeNodeLatLng = new google.maps.LatLng(gps[0], gps[1]);
-				var tileDeg = 360.0 / Math.pow(2, zoom);
-				var rLng = tileDeg * 0.78125;
-				var rLat = rLng * Math.cos(radar.activeNodeLatLng.lat() * d2r);
-				var radar_path = [];
-				radar_path.push(radar.activeNodeLatLng);
-				var segments=8;
-				for (i=-segments; i<=segments; i++) {
-					var angle = (fov / (2*segments)) * i;
-					var x = -rLng * Math.sin((pan+angle)*d2r) + radar.activeNodeLatLng.lng();
-					var y =  rLat * Math.cos((pan+angle)*d2r) + radar.activeNodeLatLng.lat();
-					radar_path.push(new google.maps.LatLng(y, x));
-				}
-				if (radar.poly) {
-					radar.poly.setMap(null);
-					radar.poly = null;
-				}
-				radar.poly = new google.maps.Polygon({
-					paths: radar_path,
-					strokeColor: '#282828',
-					strokeOpacity: 0.8,
-					strokeWeight: 1,
-					fillColor: '#282828',
-					fillOpacity: 0.35
-				});
-				radar.poly.setMap(map);
+			if (me._floorplan.ggFilteredIds.length > 0 && me._floorplan.ggFilteredIds.indexOf(currentId) == -1) filterpassed = false;
+			if ((me._floorplan.ggSimpleFloorplanMarkerArray.hasOwnProperty(currentId)) && filterpassed) {
+				var activeMarker = me._floorplan.ggSimpleFloorplanMarkerArray[currentId];
+				if ((radar.radarElement) && (fov==radar.lastFov) && (pan==radar.lastPan) && (activeMarker.radarXPos==radar.xPos) && (activeMarker.radarYPos==radar.yPos)) return; 
+				radar.lastPan=pan; radar.lastFov=fov;
+				radar.xPos=activeMarker.radarXPos; radar.yPos=activeMarker.radarYPos;
+				if (radar.radarElement) me._floorplan__mapdiv.removeChild(radar.radarElement);
+				radar.radarElement = document.createElementNS('http://www.w3.org/2000/svg','svg');
+				radar.radarElement.setAttributeNS(null,'width',400);
+				radar.radarElement.setAttributeNS(null,'height',400);
+				radar.radarElement.setAttributeNS(null,'viewBox','0 0 400 400');
+				var radarPath = document.createElementNS('http://www.w3.org/2000/svg','path');
+				radarPath.setAttributeNS(null,'id','radarPath');
+				pan = -90 - pan;
+				var arcX1 = 200 * Math.cos((pan - fov / 2) * d2r);
+				var arcY1 = 200 * Math.sin((pan - fov / 2) * d2r);
+				var arcX2 = 200 * Math.cos((pan + fov / 2) * d2r);
+				var arcY2 = 200 * Math.sin((pan + fov / 2) * d2r);
+				arcX1 += 200;
+				arcY1 += 200;
+				arcX2 += 200;
+				arcY2 += 200;
+				var radarPathString = 'M200,200 L' + arcX1 + ',' + arcY1 + ' A 200 200 0 0 1 ' + arcX2 + ' ' + arcY2 +' Z';
+				radarPath.setAttributeNS(null,'d', radarPathString);
+				radarPath.setAttributeNS(null,'fill', '#282828');
+				radarPath.setAttributeNS(null,'fill-opacity', 0.35);
+				radarPath.setAttributeNS(null,'stroke', '#282828');
+				radarPath.setAttributeNS(null,'stroke-opacity', 0.8);
+				radarPath.setAttributeNS(null,'stroke-width', 1);
+				radarPath.setAttributeNS(null,'stroke-linejoin', 'miter');
+				radar.radarElement.appendChild(radarPath);
+				me._floorplan__mapdiv.appendChild(radar.radarElement);
+				var radarXPos = activeMarker.radarXPos - 200;
+				var radarYPos = activeMarker.radarYPos - 200;
+				radar.radarElement.style['position'] = 'absolute';
+				radar.radarElement.style['left'] = '' + radarXPos + 'px';
+				radar.radarElement.style['top'] = '' + radarYPos + 'px';
+				radar.radarElement.style['z-index'] = me._floorplan.style['z-index'] + 1;
 			} else {
-				if (radar) {
-					activeNodeLatLng = new google.maps.LatLng(0,0);
-					if (radar.poly) {
-						radar.poly.setMap(null);
-						radar.poly = null;
-					}
+				if (radar.radarElement) {
+					me._floorplan__mapdiv.removeChild(radar.radarElement);
+					radar.radarElement = null;
 				}
 			}
 		}
-		me._map.ggTileAvailable=function(x, y, z) {
-			var mapDetails = player.getMapDetails(me._map.ggMapId);
-			if (z < 7 || z > 7 + (mapDetails['zoomlevels'] - 1)) return false;
-			var mapAR = mapDetails['width'] / mapDetails['height'];
-			if (mapDetails['width'] >= mapDetails['height']) {
-			var tilesInX = Math.pow(2, z - 7);
-			var tilesInY = Math.ceil(tilesInX / mapAR);
-			} else {
-				var tilesInY = Math.pow(2, z - 7);
-				var tilesInX = Math.ceil(tilesInY * mapAR);
+		me._floorplan.ggShowSimpleFloorplan=function(mapDetails) {
+			var mapWidth = me._floorplan.clientWidth;
+			var mapHeight = me._floorplan.clientHeight;
+			var tmpWidth = mapDetails['width'];
+			var tmpHeight = mapDetails['height'];
+			var levelLimit = 1000;
+			var levels = 1;
+			while (levelLimit < mapDetails['width'] || levelLimit < mapDetails['height']) {
+				tmpWidth /= 2;
+				tmpHeight /= 2;
+				levelLimit *= 2;
+				levels++;
 			}
-			var tilesXStart = Math.pow(2, z - 1);
-			var tilesYStart = tilesXStart;
-			var tilesXEnd = tilesXStart + tilesInX - 1;
-			var tilesYEnd = tilesYStart + tilesInY - 1;
-			if (x < tilesXStart || x > tilesXEnd || y < tilesYStart || y > tilesYEnd) return false;
-			return true;
+			var level = 1;
+			while (levels > level && ((mapWidth * window.devicePixelRatio) >= 2*tmpWidth || (mapHeight * window.devicePixelRatio) >= 2*tmpHeight)) {
+				tmpWidth *= 2;
+				tmpHeight *= 2;
+				levelLimit *= 2;
+				level++;
+			}
+			var imageFilename = basePath + 'images/maptiles/' + me._floorplan.ggMapId + '_' + level + '.' + mapDetails['tileformat'];
+			me._floorplan__img.setAttribute('src', imageFilename);
+			me._floorplan__img.setAttribute('loading', 'lazy');
+		me._floorplan__mapdiv.setAttribute('style','position: absolute; left: 50%; margin-left: -' + me._floorplan.ggFloorplanWidth / 2 + 'px; top: 50%; margin-top: -' + me._floorplan.ggFloorplanHeight / 2 + 'px;width:' + me._floorplan.ggFloorplanWidth + 'px;height:' + me._floorplan.ggFloorplanHeight + 'px;overflow:hidden;;');
+		var image_rendering_prop = (player.getBrowser() == 2 || player.getBrowser() == 3) ? 'crisp-edges' : 'pixelated';
+		me._floorplan__img.setAttribute('style','width:' + me._floorplan.ggFloorplanWidth + 'px;height:' + me._floorplan.ggFloorplanHeight + 'px;-webkit-user-drag:none;pointer-events:none;image-rendering:' + (mapDetails['crispedges'] ? image_rendering_prop : 'auto') + ';');
 		}
-		me._map.ggSetLayer=function(layerIndex) {
-			if (Array.isArray(me._map.ggMapLayers) && layerIndex >= 0 && layerIndex < me._map.ggMapLayers.length) {
-				me._map.ggMap.setMapTypeId(me._map.ggMapLayers[layerIndex]);
+		me._floorplan.ggCalculateFloorplanSize=function(mapDetails) {
+			var floorplanWidth = mapDetails['width'];
+			var floorplanHeight = mapDetails['height'];
+			var frameAR = me._floorplan.clientWidth / me._floorplan.clientHeight;
+			var floorplanAR = floorplanWidth / floorplanHeight;
+			if (frameAR > floorplanAR) {
+				me._floorplan.ggFloorplanHeight = me._floorplan.clientHeight;
+				me._floorplan.ggFloorplanWidth = me._floorplan.ggFloorplanHeight * floorplanAR;
+			} else {
+				me._floorplan.ggFloorplanWidth = me._floorplan.clientWidth;
+				me._floorplan.ggFloorplanHeight = me._floorplan.ggFloorplanWidth / floorplanAR;
 			}
 		}
-		me._map.ggInitMap=function(keepZoom) {
-			var mapType = player.getMapType(me._map.ggMapId);
-			var mapDetails = player.getMapDetails(me._map.ggMapId);
-			if (!me._map.ggMapId) return;
-			if (!me._map.ggMapId.startsWith('google') && Object.keys(mapDetails).length === 0) return;
-			if (mapType == 'file') {
-				me._map.style.backgroundColor = mapDetails['bgcolor'];
-				me._map.ggFloorplanNorth = mapDetails['floorplannorth'];
+		me._floorplan.ggInitMap=function() {
+			var mapDetails = player.getMapDetails(me._floorplan.ggMapId);
+			if (Object.keys(mapDetails).length === 0) return;
+			me._floorplan.style.backgroundColor = mapDetails['bgcolor'];
+			if (mapDetails.hasOwnProperty('transparent') && mapDetails['transparent']) {
+				me._floorplan.ggPermeableMap = true;
 			} else {
-				me._map.style.backgroundColor = '#fff';
+				me._floorplan.ggPermeableMap = false;
 			}
-			var gps;
-			if (player.getMapType(me._map.ggMapId) == 'web') {
-				gps=player.getNodeLatLng();
-			} else {
-				gps=player.getNodeMapCoords(null, me._map.ggMapId);
-			}
-			if ((typeof google !== 'object') || (typeof google.maps !== 'object')) return;
-			if ((gps.length>=2) && ((gps[0]!=0) || (gps[1]!=0))) {
-				activeNodeLatLng = new google.maps.LatLng(gps[0], gps[1]);
-			} else {
-				activeNodeLatLng = new google.maps.LatLng(me._map.ggLastLat, me._map.ggLastLng);
-			}
-			if (mapType == 'web') {
-				var mapTypeId;
-				if (me._map.ggMapId == 'googleroadmap') {
-					mapTypeId = google.maps.MapTypeId.ROADMAP;
-				} else if (me._map.ggMapId == 'googlehybrid') {
-					mapTypeId = google.maps.MapTypeId.HYBRID;
-				} else if (me._map.ggMapId == 'googlesatellite') {
-					mapTypeId = google.maps.MapTypeId.SATELLITE;
-				} else if (me._map.ggMapId == 'googleterrain') {
-					mapTypeId = google.maps.MapTypeId.TERRAIN;
-				} else {
-					mapTypeId = mapDetails['mapprovider'];
-				}
-				if (me._map.ggLastZoom == -1) me._map.ggLastZoom = 14;
-				var initZoom = keepZoom ? me._map.ggLastZoom : 14;
-				var mapOptions = {
-					zoom: initZoom,
-					center: activeNodeLatLng,
-					mapTypeId: mapTypeId,
-					fullscreenControl: false,
-					mapTypeControl: false,
-					streetViewControl: false,
-					gestureHandling: 'greedy'
-				};
-				if (mapDetails.hasOwnProperty('maplimits') && (mapDetails['maplimits'].length == 4)) {
-					mapOptions.restriction = {
-						strictBounds: false,
-						latLngBounds: {
-							north: parseFloat(mapDetails['maplimits'][0]),
-							east: parseFloat(mapDetails['maplimits'][1]),
-							south: parseFloat(mapDetails['maplimits'][2]),
-							west: parseFloat(mapDetails['maplimits'][3]),
-						}
-					}
-				}
-				me._map.ggMap = new google.maps.Map(me._map, mapOptions);
-				if (mapTypeId == 'googlecustomstyle') {
-					var styledMapType = new google.maps.StyledMapType(JSON.parse(mapDetails['googlecustomstylecode']), {name: 'Styled Map'});
-					me._map.ggMap.mapTypes.set('styled_map', styledMapType);
-					me._map.ggMap.setMapTypeId('styled_map');
-				}
-				if (mapTypeId == 'googlemap') {
-					if (mapDetails.hasOwnProperty('googlelayerstyles')) {
-						me._map.ggMapLayers = [];
-						for (let layerIndex = 0; layerIndex < mapDetails['googlelayerstyles'].length; layerIndex++) {
-							let layerStyle = mapDetails['googlelayerstyles'][layerIndex];
-							if (layerStyle.indexOf('/') != -1) {
-								var mapTypeId = 'custom' + layerIndex;
-								me._map.ggMapLayers.push(mapTypeId);
-								me._map.ggMap.mapTypes.set(mapTypeId, new google.maps.ImageMapType({
-								getTileUrl: function(coord, zoom) {
-									var urlString = layerStyle;
-									urlString = urlString.replace('{s}', 'a');
-									urlString = urlString.replace('{z}', zoom);
-									urlString = urlString.replace('{x}', coord.x);
-									urlString = urlString.replace('{y}', coord.y);
-									return urlString;
-								},
-								maxZoom: 19,
-								tileSize: new google.maps.Size(256, 256),
-								name: mapDetails['googlelayernames'][layerIndex]
-								})) ;
-							} else {
-								me._map.ggMapLayers.push(layerStyle);
-							}
-						}
-						me._map.ggMap.setOptions({
-							mapTypeControl: true,
-							mapTypeControlOptions: {
-								style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-								mapTypeIds: me._map.ggMapLayers
-							}
-						});
-						me._map.ggMap.setMapTypeId(me._map.ggMapLayers[0]);
-					} else {
-						me._map.ggMap.setMapTypeId(mapDetails['mapstyle']);
-					}
-				}
-				if (mapTypeId == 'openstreetmap') {
-					me._map.ggMap.mapTypes.set('openstreetmap', new google.maps.ImageMapType({
-						getTileUrl: function(coord, zoom) {
-							if (mapDetails['mapstyle'] == 'streets') {
-								return 'https://tile.openstreetmap.org/' + zoom + '/' + coord.x + '/' + coord.y + '.png';
-							} else if (mapDetails['mapstyle'] == 'outdoors') {
-								return 'https://a.tile.opentopomap.org/' + zoom + '/' + coord.x + '/' + coord.y + '.png';
-							}
-						},
-						tileSize: new google.maps.Size(256, 256),
-						name: mapDetails['title'],
-						maxZoom: mapDetails['mapstyle'] == 'outdoors' ? 17 : 18
-					}));
-				}
-				if (mapTypeId == 'mapbox') {
-					if (mapDetails.hasOwnProperty('mapboxlayerstyleurls')) {
-						me._map.ggMapLayers = [];
-						for (let layerIndex = 0; layerIndex < mapDetails['mapboxlayerstyleurls'].length; layerIndex++) {
-							var mapTypeId = 'mapbox' + layerIndex;
-							me._map.ggMapLayers.push(mapTypeId);
-							me._map.ggMap.mapTypes.set(mapTypeId, new google.maps.ImageMapType({
-								getTileUrl: function(coord, zoom) {
-									var layerStyle = mapDetails['mapboxlayerstyleurls'][layerIndex];
-									if (!layerStyle.startsWith('mapbox:')) {
-											if (layerStyle == 'satellite') {
-												var urlString = 'https://api.mapbox.com/v4/mapbox.' + layerStyle +  '/{z}/{x}/{y}@2x.png?access_token=' + mapDetails["mapkey"];
-											} else {
-												var urlString = 'https://api.mapbox.com/styles/v1/mapbox/' + layerStyle +  '-v11/tiles/256/{z}/{x}/{y}@2x?access_token=' + mapDetails["mapkey"];
-											}
-										urlString = urlString.replace('{s}', 'a');
-										urlString = urlString.replace('{z}', zoom);
-										urlString = urlString.replace('{x}', coord.x);
-										urlString = urlString.replace('{y}', coord.y);
-										return urlString;
-									} else {
-										layerStyle = layerStyle.slice(layerStyle.indexOf('styles/') + 7)
-										var urlString = 'https://api.mapbox.com/styles/v1/' + layerStyle + '/tiles/256/{z}/{x}/{y}@2x?access_token=' + mapDetails["mapkey"];
-										urlString = urlString.replace('{s}', 'a');
-										urlString = urlString.replace('{z}', zoom);
-										urlString = urlString.replace('{x}', coord.x);
-										urlString = urlString.replace('{y}', coord.y);
-										return urlString;
-									} 
-								},
-								maxZoom: 18,
-								tileSize: new google.maps.Size(256, 256),
-								name: mapDetails['mapboxlayernames'][layerIndex]
-							}));
-						}
-						me._map.ggMap.setOptions({
-							mapTypeControl: true,
-							mapTypeControlOptions: {
-								style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-								mapTypeIds: me._map.ggMapLayers
-							}
-						});
-						me._map.ggMap.setMapTypeId(me._map.ggMapLayers[0]);
-					} else {
-						me._map.ggMap.mapTypes.set('mapbox', new google.maps.ImageMapType({
-							getTileUrl: function(coord, zoom) {
-								if (mapDetails['styleurl'] == '') {
-									if (mapDetails['mapstyle'] == 'satellite') {
-										var urlString = 'https://api.mapbox.com/v4/mapbox.' + mapDetails["mapstyle"] +  '/{z}/{x}/{y}@2x.png?access_token=' + mapDetails["mapkey"];
-									} else {
-										var urlString = 'https://api.mapbox.com/styles/v1/mapbox/' + mapDetails["mapstyle"] +  '-v11/tiles/256/{z}/{x}/{y}@2x?access_token=' + mapDetails["mapkey"];
-									}
-										urlString = urlString.replace('{s}', 'a');
-										urlString = urlString.replace('{z}', zoom);
-										urlString = urlString.replace('{x}', coord.x);
-										urlString = urlString.replace('{y}', coord.y);
-										return urlString;
-								} else {
-									var styleurlstring = mapDetails['styleurl'];
-									styleurlstring = styleurlstring.slice(styleurlstring.indexOf('styles/') + 7);
-									var urlString = 'https://api.mapbox.com/styles/v1/' + styleurlstring + '/tiles/256/{z}/{x}/{y}@2x?access_token=' + mapDetails["mapkey"];
-										urlString = urlString.replace('{s}', 'a');
-										urlString = urlString.replace('{z}', zoom);
-										urlString = urlString.replace('{x}', coord.x);
-										urlString = urlString.replace('{y}', coord.y);
-										return urlString;
-								}
-							},
-							tileSize: new google.maps.Size(256, 256),
-							name: mapDetails['title'],
-							maxZoom: 18
-						}));
-					}
-				}
-				if (mapTypeId == 'custom') {
-					if (mapDetails.hasOwnProperty('customlayerurltemplates')) {
-						me._map.ggMapLayers = [];
-						for (let layerIndex = 0; layerIndex < mapDetails['customlayerurltemplates'].length; layerIndex++) {
-							var mapTypeId = 'custom' + layerIndex;
-							me._map.ggMapLayers.push(mapTypeId);
-							me._map.ggMap.mapTypes.set(mapTypeId, new google.maps.ImageMapType({
-								getTileUrl: function(coord, zoom) {
-									var urlString = mapDetails['customlayerurltemplates'][layerIndex];
-									urlString = urlString.replace('{s}', 'a');
-									urlString = urlString.replace('{z}', zoom);
-									urlString = urlString.replace('{x}', coord.x);
-									urlString = urlString.replace('{y}', coord.y);
-									return urlString;
-								},
-								maxZoom: parseInt(mapDetails['customlayermaxzooms'][layerIndex]),
-								tileSize: new google.maps.Size(256, 256),
-								name: mapDetails['customlayernames'][layerIndex]
-							}));
-						}
-						me._map.ggMap.setOptions({
-							mapTypeControl: true,
-							mapTypeControlOptions: {
-								style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-								mapTypeIds: me._map.ggMapLayers
-							}
-						});
-						me._map.ggMap.setMapTypeId(me._map.ggMapLayers[0]);
-					} else {
-						me._map.ggMap.mapTypes.set('custom', new google.maps.ImageMapType({
-							getTileUrl: function(coord, zoom) {
-								var urlString = mapDetails['mapurltemplate'];
-								urlString = urlString.replace('{s}', 'a');
-								urlString = urlString.replace('{z}', zoom);
-								urlString = urlString.replace('{x}', coord.x);
-								urlString = urlString.replace('{y}', coord.y);
-								return urlString;
-							},
-							tileSize: new google.maps.Size(256, 256),
-							name: mapDetails['title'],
-							maxZoom: mapDetails['mapmaxzoom']
-						}));
-					}
-				}
-				google.maps.event.addListener(me._map.ggMap, 'idle', function(){
-					me.updateSize(me._map);
-				});
-				google.maps.event.addListener(me._map.ggMap, 'zoom_changed', function(){
-					me._map.ggRadar.update();
-				});
-			} else if (mapType == 'file') {
-				if (me._map.ggLastZoom == -1) me._map.ggLastZoom = 7;
-				var initZoom = keepZoom ? me._map.ggLastZoom : 7;
-				var mapOptions = {
-				  backgroundColor: mapDetails['bgcolor'],
-					zoom: initZoom,
-					minZoom: 7,
-					maxZoom: 7 + (mapDetails['zoomlevels'] - 1) + 0,
-					center: activeNodeLatLng,
-					fullscreenControl: false,
-					mapTypeControl: false,
-					streetViewControl: false,
-					gestureHandling: 'greedy'
-				};
-				me._map.ggMap = new google.maps.Map(me._map, mapOptions);
-				var customMapType = new google.maps.ImageMapType({
-					getTileUrl: function(coord, zoom) {
-						if (me._map.ggTileAvailable(coord.x, coord.y, zoom)) {
-							return basePath + 'images/maptiles/' + me._map.ggMapId + '/' + zoom + '/' + coord.x + '_' + coord.y + '.' + mapDetails['tileformat'];
-						} else {
-							return null;
-						}
-					},
-					tileSize: new google.maps.Size(256, 256),
-					minZoom: 7,
-					maxZoom: 7 + mapDetails['zoomlevels'],
-					name: mapDetails['title'],
-				});
-				me._map.ggMap.mapTypes.set(me._map.ggMapId, customMapType);
-				me._map.ggMap.setMapTypeId(me._map.ggMapId);
-				me._map.ggCalculateFloorplanDimInDeg(mapDetails);
-				google.maps.event.addListener(me._map.ggMap, 'center_changed', function() {
-					me._map.ggCheckBounds(mapDetails);
-				});
-				google.maps.event.addListener(me._map.ggMap, 'zoom_changed', function() {
-					me._map.ggCheckBounds(mapDetails);
-					me._map.ggRadar.update();
-				});
-			}
-			me._map.ggMapNotLoaded = false;
+			me._floorplan.ggCalculateFloorplanSize(mapDetails);
+			me._floorplan.ggShowSimpleFloorplan(mapDetails);
+			me._floorplan.ggFloorplanNorth = mapDetails['floorplannorth'];
+			me._floorplan.ggMapNotLoaded = false;
 		}
-		me._map.ggClearMap=function() {
-		me._map.ggClearMapMarkers();
-		me._map.ggMap = null;
-		me._map.ggMapNotLoaded = true;
+		me._floorplan.ggClearMap=function() {
+			me._floorplan.ggClearMapMarkers();
+			me._floorplan.ggMapNotLoaded = true;
 		}
-		me._map.ggClearMapMarkers=function() {
-			me._map.ggLastActivMarker = null;
-			var id,marker;
-			var markers=me._map.ggMarkerArray;
+		me._floorplan.ggChangeMap=function(mapId) {
+			var newMapType = player.getMapType(mapId)
+			if (newMapType == 'web') {
+				return;
+			}
+			me._floorplan.ggMapId = mapId;
+			if (!me._floorplan.ggMapNotLoaded) {
+				me._floorplan.ggClearMap();
+				me._floorplan.ggInitMap();
+				me._floorplan.ggInitMapMarkers();
+			}
+		}
+		me._floorplan.ggPlaceMarkersOnSimpleFloorplan=function() {
+			var markers=me._floorplan.ggSimpleFloorplanMarkerArray;
 			for (id in markers) {
 				if (markers.hasOwnProperty(id)) {
 					marker=markers[id];
-					if (marker._div.parentNode) {
-						marker._div.parentNode.removeChild(marker._div);
-					}
-					marker.setMap(null);
-				}
-			}
-			me._map.ggMarkerArray=[];
-			me._map.ggMarkerInstances=[];
-			me._map.ggLastActivMarker = null;
-		}
-		me._map.ggCenterNode=function(nodeId) {
-			if (!me._map.ggMap) return;
-			var gps;
-			if (player.getMapType(me._map.ggMapId) == 'web') {
-				gps=player.getNodeLatLng(nodeId);
-			} else {
-				gps=player.getNodeMapCoords(nodeId, me._map.ggMapId);
-			}
-			if ((gps.length>=2) && ((gps[0]!=0) || (gps[1]!=0))) {
-				var markerLocation = new google.maps.LatLng(gps[0], gps[1]);
-				me._map.ggMap.panTo(markerLocation);
-			}
-		}
-		me._map.ggFitBounds=function(force) {
-			if (me._map.ggMapNotLoaded) return;
-			if (!me._map.ggMap) return;
-			if (!me._map.ggMarkerBounds.isEmpty()) {
-				if (me._map.ggMarkerInstances.length > 1 || Object.getOwnPropertyNames(me._map.ggGoogleMarkerArray).length > 1) {
-					me._map.ggMap.fitBounds(me._map.ggMarkerBounds, 30);
-				} else {
-					me._map.ggMap.setCenter(me._map.ggMarkerBounds.getCenter());
-					if (player.getMapType(me._map.ggMapId) == 'web') {
-						me._map.ggMap.setZoom(18);
-					} else {
-						me._map.ggMap.setZoom(7);
-					}
+					var coords = player.getNodeMapCoordsInPercent(id, me._floorplan.ggMapId);
+					var xPos = (me._floorplan.ggFloorplanWidth * coords[0]) / 100.0;
+					var yPos = (me._floorplan.ggFloorplanHeight * coords[1]) / 100.0;
+					marker.radarXPos = xPos;
+					marker.radarYPos = yPos;
+					xPos -= me._floorplan.ggHMarkerAnchorOffset;
+					yPos -= me._floorplan.ggVMarkerAnchorOffset;
+					marker.style['position'] = 'absolute';
+					marker.style['left'] = xPos + 'px';
+					marker.style['top'] = yPos + 'px';
+					marker.style['z-index'] = me._floorplan.style['z-index'] + 2;
 				}
 			}
 		}
-		me._map.ggInitMapMarkers=function(updateMapBounds) {
-			if (!me._map.ggMap) return;
-			function SkinMarkerOverlay(pos, div, map) {
-				this._pos = pos;
-				this._div = div;
-				this._map = map;
-				this.setMap(map);
-			}
-			SkinMarkerOverlay.prototype = new google.maps.OverlayView();
-			SkinMarkerOverlay.prototype.onAdd = function() {
-				this.getPanes().overlayMouseTarget.appendChild(this._div);
-				skin.updateSize(this._div);
-			}
-			SkinMarkerOverlay.prototype.draw = function() {
-				var overlayProjection = this.getProjection();
-				var point = this.getProjection().fromLatLngToDivPixel(this._pos);
-				if (point) {
-					this._div.style.left =(point.x - 16) + 'px';
-					this._div.style.top =(point.y - 16) + 'px';
-				}
-			};
-			SkinMarkerOverlay.prototype.onRemove = function() {
-				this._div = null;
-			};
-			SkinMarkerOverlay.prototype.getPosition = function() {
-				return this._pos;
-			};
-			me._map.ggClearMapMarkers();
+		me._floorplan.ggInitMapMarkers=function() {
+			me._floorplan.ggClearMapMarkers();
 			var ids=player.getNodeIds();
-			me._map.ggFilteredIds = [];
-			if (me._map.ggFilter != '') {
-				var filter = me._map.ggFilter.split(',');
+			me._floorplan.ggFilteredIds = [];
+			if (me._floorplan.ggFilter != '') {
+				var filter = me._floorplan.ggFilter.split(',');
 				for (i=0; i < ids.length; i++) {
 					var nodeId = ids[i];
 					var nodeData = player.getNodeUserdata(nodeId);
 					for (var j=0; j < filter.length; j++) {
-						if (nodeData['tags'].indexOf(filter[j].trim()) != -1) me._map.ggFilteredIds.push(nodeId);
+						if (nodeData['tags'].indexOf(filter[j].trim()) != -1) me._floorplan.ggFilteredIds.push(nodeId);
 					}
 				}
-				if (me._map.ggFilteredIds.length > 0) ids = me._map.ggFilteredIds;
+				if (me._floorplan.ggFilteredIds.length > 0) ids = me._floorplan.ggFilteredIds;
 			}
-			var marker;
-			var markerLocation;
-			me._map.ggMarkerBounds = new google.maps.LatLngBounds();
-			var currentId = player.getCurrentNode();
-			for(var i=0;i<ids.length;i++) {
-				var id=ids[i];
-				var gps;
-				if (player.getMapType(me._map.ggMapId) == 'web') {
-					gps=player.getNodeLatLng(id);
-				} else {
-					gps=player.getNodeMapCoords(id, me._map.ggMapId);
-				}
-				if ((gps.length>=2) && ((gps[0]!=0) || (gps[1]!=0))) {
-					markerLocation = new google.maps.LatLng(gps[0], gps[1]);
+			for(var i=0; i < ids.length; i++) {
+				var id = ids[i];
+				var coords = player.getNodeMapCoordsInPercent(id, me._floorplan.ggMapId);
+				if (coords.length>=2) {
+					me._floorplan.ggHMarkerAnchorOffset = 16;
+					me._floorplan.ggVMarkerAnchorOffset = 16;
 					var markerParent = new Object();
 					markerParent.ggElementNodeId=function() { return id };
-					var div=new SkinElement_map_pin_Class(me, markerParent);
-					marker=new SkinMarkerOverlay(markerLocation,div._map_pin ,me._map.ggMap);
-
-					me._map.ggMarkerArray[id]=marker;
-					me._map.ggMarkerInstances.push(div);
-					me._map.ggMarkerBounds.extend(markerLocation);
+					var markerClass = new SkinElement_map_pin_Class(me, markerParent);
+					me._floorplan.ggMarkerInstances.push(markerClass);
+					var marker = markerClass._map_pin;
+					me._floorplan.ggSimpleFloorplanMarkerArray[id] = marker;
+					me._floorplan__mapdiv.appendChild(marker);
 				}
 			}
-			if (ids.length > 1 && !me._map.ggMarkerBounds.isEmpty() && updateMapBounds) {
-				me._map.ggFitBounds(false);
-			}
-			skin.updateSize(me._map);
-			this.ggLastActivMarker = null;
-			if (this.ggUpdateConditionNodeChange) this.ggUpdateConditionNodeChange();
-			this.ggRadar.lastFov = -1;
-			this.ggRadar.update();
+			me._floorplan.ggPlaceMarkersOnSimpleFloorplan();
+			skin.updateSize(me._floorplan);
 		}
-		me._map.ggChangeMap=function(mapId) {
-			var newMapType = player.getMapType(mapId)
-			if (newMapType == 'file') {
-				return;
-			}
-			me._map.ggMapId = mapId;
-			if (!me._map.ggMapNotLoaded) {
-				me._map.ggLastZoom = me._map.ggMap.getZoom();
-				me._map.ggLastLat = me._map.ggMap.getCenter().lat();
-				me._map.ggLastLng = me._map.ggMap.getCenter().lng();
-				me._map.ggClearMap();
-				me._map.ggInitMap(true);
-				me._map.ggInitMapMarkers(false);
-			}
-		}
-		me._map.ggCalculateFloorplanDimInDeg=function(mapDetails) {
-			var mapAR = mapDetails['width'] / mapDetails['height'];
-			var tileInDeg = 360.0 / Math.pow(2, 7);
-			if (mapDetails['width'] >= mapDetails['height']) {
-				var tmpWidth = mapDetails['width'];
-				while (tmpWidth > 256) {
-					tmpWidth /= 2;
+		me._floorplan.ggClearMapMarkers=function() {
+			for (id in me._floorplan.ggSimpleFloorplanMarkerArray) {
+				if (me._floorplan.ggSimpleFloorplanMarkerArray.hasOwnProperty(id)) {
+					me._floorplan__mapdiv.removeChild(me._floorplan.ggSimpleFloorplanMarkerArray[id]);
 				}
-				me._map.mapWidthInDeg = tileInDeg * (tmpWidth / 256);
-				me._map.mapHeightInDeg = me._map.mapWidthInDeg / mapAR;
-			} else {
-				var tmpHeight = mapDetails['height'];
-				while (tmpHeight > 256) {
-					tmpHeight /= 2;
-				}
-				me._map.mapHeightInDeg = tileInDeg * (tmpHeight / 256);
-				me._map.mapWidthInDeg = me._map.mapHeightInDeg * mapAR;
 			}
+			me._floorplan.ggMarkerInstances=[];
+			me._floorplan.ggSimpleFloorplanMarkerArray=[];
 		}
-		me._map.ggInCheckBounds=false;
-		me._map.ggCheckBounds=function(mapDetails) {
-			if (me._map.ggInCheckBounds) return;
-			me._map.ggInCheckBounds = true;
-			var mapCenter = me._map.ggMap.getCenter();
-			var currentZoom = me._map.ggMap.getZoom();
-			var pixelInDeg = 360.0 / (Math.pow(2, currentZoom) * 256)
-			var xOffset = (me._map.clientWidth / 2.0) * pixelInDeg;
-			var yOffset = (me._map.clientHeight / 2.0) * pixelInDeg;
-			var x = mapCenter.lng();
-			var y = mapCenter.lat();
-			var xTemp = x;
-			var yTemp = y;
-			if (me._map.mapWidthInDeg < me._map.clientWidth * pixelInDeg) {
-				var xMargin = (me._map.clientWidth * pixelInDeg - me._map.mapWidthInDeg) / 2;
-				if (x < me._map.mapWidthInDeg / 2 - xMargin) x = me._map.mapWidthInDeg / 2 - xMargin;
-				if (x > me._map.mapWidthInDeg / 2 + xMargin) x = me._map.mapWidthInDeg / 2 + xMargin;
-			} else {
-				if (x > me._map.mapWidthInDeg - xOffset) x = me._map.mapWidthInDeg - xOffset;
-				if (x < xOffset) x = xOffset;
-			}
-			if (me._map.mapHeightInDeg < me._map.clientHeight * pixelInDeg) {
-				var yMargin = (me._map.clientHeight * pixelInDeg - me._map.mapHeightInDeg) / 2;
-				if (y < -me._map.mapHeightInDeg / 2 - yMargin) y = -me._map.mapHeightInDeg / 2 - yMargin;
-				if (y > -me._map.mapHeightInDeg / 2 + yMargin) y = -me._map.mapHeightInDeg / 2 + yMargin;
-			} else {
-				if (y < -me._map.mapHeightInDeg + yOffset) y = -me._map.mapHeightInDeg + yOffset;
-				if (y > -yOffset) y = -yOffset;
-			}
-			if (x != xTemp || y != yTemp) {
-				me._map.ggMap.setCenter(new google.maps.LatLng(y, x));
-			}
-			me._map.ggInCheckBounds = false;
-		}
-		me._map.logicBlock_size();
-		me._map.logicBlock_visible();
-		me._floorplan.ggInitMap=function() {};
-		me._floorplan.ggInitMapMarkers=function() {};
-		me._floorplan.ggClearMap=function() {};
 		me._floorplan.logicBlock_size();
 		me._floorplan.logicBlock_visible();
 		me._thumbnail_menu.logicBlock_size();
@@ -10498,33 +10142,38 @@ function pano2vrSkin(player,base) {
 			me._map_bg.logicBlock_visible();
 			me._map.logicBlock_size();
 			me._map.logicBlock_visible();
-			for (var i=0; i < me._map.ggMarkerInstances.length; i++) {
-				me._map.ggMarkerInstances[i].ggEvent_changenode();
+			me._floorplan.logicBlock_size();
+			me._floorplan.logicBlock_visible();
+			for (var i=0; i < me._floorplan.ggMarkerInstances.length; i++) {
+				me._floorplan.ggMarkerInstances[i].ggEvent_changenode();
 			}
-			if (me._map.ggLastActivMarker) {
-				if (me._map.ggLastActivMarker._div.ggDeactivate) me._map.ggLastActivMarker._div.ggDeactivate();
+			var mapDetails = player.getMapDetails(me._floorplan.ggMapId);
+			if (mapDetails.hasOwnProperty('title')) {
+				me._floorplan.ggCalculateFloorplanSize(mapDetails);
+				me._floorplan.ggShowSimpleFloorplan(mapDetails);
+				me._floorplan.ggPlaceMarkersOnSimpleFloorplan();
 			}
-			var id=player.getCurrentNode();
-			if (me.ggMarkerArray) {
-			var marker=me._map.ggMarkerArray[id];
+			if (me._floorplan.ggRadar) me._floorplan.ggRadar.update();
+			if (me._floorplan.ggLastNodeId) {
+				var lastActiveMarker = me._floorplan.ggSimpleFloorplanMarkerArray[me._floorplan.ggLastNodeId];
+				if (lastActiveMarker && lastActiveMarker.ggDeactivate) lastActiveMarker.ggDeactivate();
+			}
+			var id = player.getCurrentNode();
+			var marker = me._floorplan.ggSimpleFloorplanMarkerArray[id];
 			if (marker) {
-				if (marker._div.ggActivate) marker._div.ggActivate();
+				if (marker.ggActivate) marker.ggActivate();
 			}
-			me._map.ggLastActivMarker=marker;
-			}
-			if (player.getMapType(me._map.ggMapId) == 'file') {
-				var coords = player.getNodeMapCoords(id, me._map.ggMapId);
+			if (player.getMapType(me._floorplan.ggMapId) == 'file') {
+				var coords = player.getNodeMapCoords(id, me._floorplan.ggMapId);
 				if (coords.length < 2) {
 					var mapId = player.getMapContainingNode(id);
 					if (mapId != '') {
-							me._map.ggChangeMap(mapId);
+							me._floorplan.ggChangeMap(mapId);
 					}
 				}
 			}
-			me._map.ggLastNodeId = id;
-			me._map.ggRadar.update();
-			me._floorplan.logicBlock_size();
-			me._floorplan.logicBlock_visible();
+			me._floorplan.ggLastNodeId = id;
+			me._floorplan.ggRadar.update();
 			me._thumbnail_menu.logicBlock_size();
 			me._thumbnail_menu.logicBlock_visible();
 			me._nodes.logicBlock_visible();
@@ -10723,13 +10372,13 @@ function pano2vrSkin(player,base) {
 			me._map_bg.logicBlock_visible();
 			me._map.logicBlock_size();
 			me._map.logicBlock_visible();
-			if (me._map.ggVisible) {
-				me._map.ggClearMap();
-				me._map.ggInitMap(false);
-				me._map.ggInitMapMarkers(true);
-			}
 			me._floorplan.logicBlock_size();
 			me._floorplan.logicBlock_visible();
+			if (me._floorplan.ggVisible) {
+				me._floorplan.ggClearMap();
+				me._floorplan.ggInitMap(false);
+				me._floorplan.ggInitMapMarkers(true);
+			}
 			me._thumbnail_menu.logicBlock_size();
 			me._thumbnail_menu.logicBlock_visible();
 			me._nodes.logicBlock_visible();
@@ -10908,7 +10557,7 @@ function pano2vrSkin(player,base) {
 			skin.updateSize(me._controls_right);
 		});
 		player.addListener('positionchanged', function(event) {
-			me._map.ggRadar.update();
+			me._floorplan.ggRadar.update();
 		});
 		player.addListener('sizechanged', function(event) {
 			me._variable_resp_desktop.logicBlock();
@@ -15578,10 +15227,10 @@ function pano2vrSkin(player,base) {
 					((player.getVariableValue('resp_phone') == false))
 				)
 			) {
-				let pdfInterval_9 = setInterval(() => {
+				let pdfInterval_35 = setInterval(() => {
 					if (skin._pdf_popup__pdf.contentWindow.PDFViewerApplication && skin._pdf_popup__pdf.contentWindow.PDFViewerApplication.initialized && skin._pdf_popup__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._pdf_popup__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._pdf_popup.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_9);
+						clearInterval(pdfInterval_35);
 					}
 				}, 50);
 			}
@@ -15632,10 +15281,10 @@ function pano2vrSkin(player,base) {
 					((player.getVariableValue('resp_phone') == true))
 				)
 			) {
-				let pdfInterval_10 = setInterval(() => {
+				let pdfInterval_36 = setInterval(() => {
 					if (skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication && skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication.initialized && skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._pdf_popup_phone.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_10);
+						clearInterval(pdfInterval_36);
 					}
 				}, 50);
 			}
