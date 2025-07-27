@@ -1006,6 +1006,7 @@
       <hotspot skinid="ht_node_1" target="" url="" tilt="-2.06" pan="-158.74" title="" description="" id="Point01"/>
       <hotspot skinid="ht_node" target="122.7/-1.2/100.0" url="{node42}" description="" id="Point02" distance="18.5799" tilt="-15.22" pan="-89.61" title=""/>
       <hotspot skinid="ht_node_1" target="-85.5/2.6/100.0" url="{node39}" description="" id="Point03" distance="96375.6" tilt="1.99" pan="-330.13" title=""/>
+      <hotspot skinid="ht_node_1" target="" url="" tilt="-17.07" pan="-347.77" title="" description="" id="Point04"/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -1114,6 +1115,7 @@
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
       <hotspot skinid="ht_node" target="144.5/-1.3/100.0" url="{node45}" description="" id="Point01" distance="47.5537" tilt="-3.2" pan="-180.51" title=""/>
+      <hotspot skinid="ht_node" target="-93.8/-0.7/100.0" url="{node49}" description="" id="Point02" distance="15.8796" tilt="5.58" pan="-277.77" title=""/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
@@ -1166,7 +1168,7 @@
     <hotspots height="20" width="180" wordwrap="1" smoothmovement="0">
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
-      <hotspot skinid="ht_url" target="_blank" url="" tilt="4.69" pan="-252.98" title="" description="" id="Point01"/>
+      <hotspot skinid="ht_node" target="-135.2/0.4/100.0" url="{node47}" description="" id="Point01" distance="19.85" tilt="4.69" pan="-252.98" title=""/>
       <hotspot skinid="ht_node" target="-34.5/-0.8/100.0" url="{node45}" description="" id="Point02" distance="37.4284" tilt="-2.15" pan="-349.75" title=""/>
     </hotspots>
     <media/>
