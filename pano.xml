@@ -1254,8 +1254,8 @@
       <label bordercolor="0x000000" borderradius="1" wordwrap="1" backgroundalpha="1" border="1" height="20" textalpha="1" borderalpha="1" width="180" textcolor="0x000000" enabled="1" background="1" backgroundcolor="0xffffff"/>
       <polystyle bordercolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
       <hotspot skinid="ht_node" target="-93.3/-0.3/100.0" url="{node44}" description="" id="Point01" distance="15.8796" tilt="-7.99" pan="-269" title=""/>
-      <hotspot skinid="ht_url" target="_blank" url="" tilt="-5" pan="-323.48" title="" description="" id="Point02"/>
-      <hotspot skinid="ht_url" target="_blank" url="" tilt="-1.45" pan="-1.72" title="" description="" id="Point03"/>
+      <hotspot skinid="ht_node" target="-176.3/-1.3/100.0" url="{node45}" description="" id="Point02" distance="38.9859" tilt="-5" pan="-323.48" title=""/>
+      <hotspot skinid="ht_node" target="-66.2/1.0/100.0" url="{node48}" description="" id="Point03" distance="28.4166" tilt="-1.45" pan="-1.72" title=""/>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="40" softedge="0" zoomout="0" type="mesh" blendcolor="0x000000" zoomafterinfov="140" zoomin="6" blendtime="0.5" zoomfov="40" zoomspeed="2" zoomoutpause="1" enabled="1" delay="previewtrack"/>
