@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.10/21009
 // Filename: netov3.ggsk
-// Generated 2025-08-04T01:51:48
+// Generated 2025-08-04T01:54:43
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -11757,9 +11757,9 @@ function pano2vrSkin(player,base) {
 		el.ggType='hotspot';
 		hs ='';
 		hs+='height : 0px;';
-		hs+='left : 382px;';
+		hs+='left : 438px;';
 		hs+='position : absolute;';
-		hs+='top : 315px;';
+		hs+='top : 235px;';
 		hs+='visibility : hidden;';
 		hs+='width : 0px;';
 		hs+='pointer-events:auto;';
@@ -11827,8 +11827,8 @@ function pano2vrSkin(player,base) {
 		}
 		el=me._ht_node_preview_bg=document.createElement('div');
 		el.ggId="ht_node_preview_bg";
-		el.ggDx=62;
-		el.ggDy=22;
+		el.ggDx=3;
+		el.ggDy=-65;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_rectangle ";
@@ -11839,9 +11839,9 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 8px;';
 		hs+='cursor : pointer;';
 		hs+='height : 118px;';
-		hs+='left : calc(50% - ((184px + 0px) / 2) + 62px);';
+		hs+='left : calc(50% - ((184px + 0px) / 2) + 3px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((118px + 0px) / 2) + 22px);';
+		hs+='top : calc(50% - ((118px + 0px) / 2) - 65px);';
 		hs+='visibility : hidden;';
 		hs+='width : 184px;';
 		hs+='pointer-events:none;';
@@ -12022,8 +12022,8 @@ function pano2vrSkin(player,base) {
 		me._ht_node_1.appendChild(me._ht_node_preview_bg);
 		el=me._ht_node_bg=document.createElement('div');
 		el.ggId="ht_node_bg";
-		el.ggDx=60;
-		el.ggDy=88;
+		el.ggDx=1;
+		el.ggDy=1;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -12034,9 +12034,9 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 16px;';
 		hs+='cursor : pointer;';
 		hs+='height : 85px;';
-		hs+='left : calc(50% - ((83px + 0px) / 2) + 60px);';
+		hs+='left : calc(50% - ((83px + 0px) / 2) + 1px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((85px + 0px) / 2) + 88px);';
+		hs+='top : calc(50% - ((85px + 0px) / 2) + 1px);';
 		hs+='visibility : inherit;';
 		hs+='width : 83px;';
 		hs+='pointer-events:auto;';
@@ -15256,10 +15256,10 @@ function pano2vrSkin(player,base) {
 					((player.getVariableValue('resp_phone') == false))
 				)
 			) {
-				let pdfInterval_11 = setInterval(() => {
+				let pdfInterval_19 = setInterval(() => {
 					if (skin._pdf_popup__pdf.contentWindow.PDFViewerApplication && skin._pdf_popup__pdf.contentWindow.PDFViewerApplication.initialized && skin._pdf_popup__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._pdf_popup__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._pdf_popup.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_11);
+						clearInterval(pdfInterval_19);
 					}
 				}, 50);
 			}
@@ -15310,10 +15310,10 @@ function pano2vrSkin(player,base) {
 					((player.getVariableValue('resp_phone') == true))
 				)
 			) {
-				let pdfInterval_12 = setInterval(() => {
+				let pdfInterval_20 = setInterval(() => {
 					if (skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication && skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication.initialized && skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._pdf_popup_phone__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._pdf_popup_phone.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_12);
+						clearInterval(pdfInterval_20);
 					}
 				}, 50);
 			}
