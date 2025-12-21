@@ -1102,6 +1102,7 @@
       <polystyle backgroundcolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" bordercolor="0x0000ff" handcursor="1" mode="0"/>
       <hotspot distance="47.5537" pan="-34.98" tilt="-1.67" title="" id="Point01" skinid="ht_node" url="{node44}" description="" target="0.0/0.0/100.0"/>
       <hotspot distance="37.4284" pan="-214.99" tilt="-0.87" title="" id="Point02" skinid="ht_node" url="{node46}" description="" target="-170.9/3.4/100.0"/>
+      <hotspot distance="21.7176" pan="-307.09" tilt="0.34" title="" id="Point03" skinid="ht_node" url="{node43}" description="" target="-142.0/-6.0/100.0"/>
     </hotspots>
     <media/>
     <transition zoomspeed="2" zoomin="6" zoomout="0" zoomoutpause="1" delay="previewtrack" softedge="0" enabled="1" zoomafterinfov="140" zoomafteroutfov="40" blendcolor="0x000000" blendtime="0.5" zoomfov="40" type="mesh"/>
