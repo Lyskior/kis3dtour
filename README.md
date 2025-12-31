@@ -1,0 +1,3 @@
+**Virtual Tour Chatbot**
+
+This project integrates an AI-powered chatbot with a Pano2VR virtual tour of Korean International School. The chatbot, built with OpenAI's GPT-4o-mini and function calling feature, can answer questions about KIS by searching a Pinecone vector database and navigate users to specific locations on the interactive 360 campus map. The frontend tracks the user's current location in the virtual tour and provides this context to the AI, allowing it to respond to queries like "Where am I?" or "Take me to the library." The chat widget appears as a floating button overlay on the tour and uses Flask as the backend server to handle API requests between the frontend and the AI agent.

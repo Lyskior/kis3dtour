@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>KIS Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f7f8;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      color: #333;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .header img {
+      height: 40px;
+      margin-right: 15px;
+    }
+
+    .header h1 {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .chat-container {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 10px 15px;
+      border-radius: 18px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      font-size: 0.95em;
+    }
+
+    .user-message {
+      background-color: #e1e1e1;
+      color: #333;
+      align-self: flex-end;
+    }
+
+    .bot-message {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      color: #333;
+      align-self: flex-start;
+    }
+    
+    .loading-message {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        color: #888;
+        align-self: flex-start;
+        font-style: italic;
+    }
+
+    .input-container {
+      padding: 20px;
+      background-color: #ffffff;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .input-form {
+      display: flex;
+      max-width: 800px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 24px;
+      padding: 5px;
+    }
+
+    #userInput {
+      flex-grow: 1;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1em;
+      outline: none;
+      background-color: transparent;
+    }
+
+    #sendBtn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2em;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #sendBtn:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="header">
+    <img src="{{ url_for('static', filename='kis_logo.png') }}" alt="KIS Logo">
+    <h1>KIS Chatbot</h1>
+  </div>
+
+  <div class="chat-container" id="chatContainer">
+    <div class="message bot-message">Hello! How can I help you today?</div>
+  </div>
+
+  <div class="input-container">
+    <form class="input-form" id="chatForm">
+      <input id="userInput" type="text" placeholder="Type your message..." autocomplete="off"/>
+      <button id="sendBtn" type="submit">➔</button>
+    </form>
+  </div>
+  
+
+  <script>
+    const chatForm = document.getElementById("chatForm");
+    const userInput = document.getElementById("userInput");
+    const chatContainer = document.getElementById("chatContainer");
+
+    chatForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const text = userInput.value.trim();
+      if (!text) return;
+
+      // Display user message
+      appendMessage(text, 'user-message');
+      userInput.value = "";
+      
+      // Display loading indicator
+      const loadingMessage = appendMessage("Thinking...", 'loading-message');
+
+      try {
+        const res = await fetch("/api/echo", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: text })
+        });
+        const data = await res.json();
+        
+        // Remove loading indicator and display bot message
+        chatContainer.removeChild(loadingMessage);
+        appendMessage(data.message, 'bot-message');
+
+      } catch (err) {
+        // Remove loading indicator and display error
+        chatContainer.removeChild(loadingMessage);
+        appendMessage("Error: " + err, 'bot-message');
+      }
+    });
+
+    function appendMessage(text, className) {
+      const messageDiv = document.createElement("div");
+      messageDiv.classList.add("message", className);
+      messageDiv.textContent = text;
+      chatContainer.appendChild(messageDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight; // Auto-scroll to the bottom
+      return messageDiv;
+    }
+
+  </script>
+</body>
+</html>
